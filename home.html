@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title id="title">아직도 펴?</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <h1>아직도 펴?</h1>
+    <button id="startBtn">금연 시작하기</button>
+    <form id="login-form" class="hidden">
+      <label for="username">이름 : </label>
+      <input id="inputName" name="username" type="text" required />
+      <label for="dambae">하루 평균 흡연량(개비) : </label>
+      <input id="inputDambae" name="dambae" type="number" required />
+      <button id="submitBtn">확인</button>
+    </form>
+    <span class="hidden" id="timer">00:00:00:00</span>
+    <div>
+      <button id="resetBtn">시간 초기화</button>
+    </div>
+    <div>
+      <span id="saveMoney">지금까지 아낀돈 : </span>
+      <span id="tobacco">안피운 담배 :</span>
+      <span id="saveLife">늘어난 수명 : </span>
+    </div>
+    <script src="js/userinfo.js"></script>
+    <script src="js/timer.js"></script>
+    <script src="js/save.js"></script>
+  </body>
+</html>
