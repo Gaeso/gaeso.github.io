@@ -19,6 +19,7 @@ function onSubmitInput(event) {
     localStorage.setItem("dambae", inputDambae.value);
     loginForm.classList.add("hidden");
     timerdiv.classList.remove("hidden");
+    timerdiv.classList.add("fadein_animation");
     localStorage.setItem("time", Date.now());
 
 }
@@ -33,6 +34,7 @@ if(savedUsername)
     startBtn.classList.add("hidden");
     loginForm.classList.add("hidden");
     timerdiv.classList.remove("hidden");
+    timerdiv.classList.add("fadein_animation");
 }
 
 startBtn.addEventListener("click", onClickBtn);
