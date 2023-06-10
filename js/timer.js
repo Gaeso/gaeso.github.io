@@ -1,5 +1,6 @@
 const damTime = document.querySelector("#timer");
 const resetBtn = document.querySelector("#resetBtn");
+
 let day, hour, min, sec;
 
 function damTimer() { 
@@ -12,7 +13,6 @@ function damTimer() {
     
     damTime.innerText = `${day}:${hour}:${min}:${sec}`;
 }
-
 
 function onReset() {
     localStorage.setItem("time", Date.now())

@@ -10,7 +10,7 @@
 }
 
 .hidden {
-    display: none;   
+    display: none; 
 }
 
 body h1 {
@@ -29,6 +29,36 @@ body {
 #resetBtn {
     font-size: 28px;
     border: 0;
+    background-color: rgb(255, 174, 174);
     color: red;
 }
 
+#border {
+    border: 2px solid black;
+}
+
+#timerdiv {
+    margin: auto;
+    padding-bottom: 20px;
+    border: 2px solid rgb(0, 0, 0);
+    border-radius: 3%;
+    width: 480px;
+}
+#tspan {
+    border-bottom: 2px solid black;
+    padding-bottom: 15px;
+}
+#tspan span{
+    font-size: 20px;
+    padding-left: 42px;
+    padding-right: 42px;
+
+}
+
+#maindiv {
+    padding: 20px;
+}
+
+#maindiv span{
+    display: block;
+}

@@ -3,7 +3,7 @@ const loginForm = document.querySelector("#login-form");
 const inputName = document.querySelector("#inputName");
 const inputDambae = document.querySelector("#inputDambae");
 const savedUsername = localStorage.getItem("username");
-const timer = document.querySelector("#timer");
+const timerdiv = document.querySelector("#timerdiv");
 
 const HIDDEN_CLASSNAME = "hidden";
 
@@ -18,7 +18,7 @@ function onSubmitInput(event) {
     localStorage.setItem("username", inputName.value);
     localStorage.setItem("dambae", inputDambae.value);
     loginForm.classList.add("hidden");
-    timer.classList.remove("hidden");
+    timerdiv.classList.remove("hidden");
     localStorage.setItem("time", Date.now());
 
 }
@@ -32,7 +32,7 @@ if(savedUsername)
 {
     startBtn.classList.add("hidden");
     loginForm.classList.add("hidden");
-    timer.classList.remove("hidden");
+    timerdiv.classList.remove("hidden");
 }
 
 startBtn.addEventListener("click", onClickBtn);
