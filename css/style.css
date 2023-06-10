@@ -41,9 +41,9 @@ body {
     margin: auto;
     padding-bottom: 20px;
     border: 2px solid rgb(0, 0, 0);
-    border-radius: 3%;
-    width: 480px;
-}
+    border-radius: 20px;
+    width: 800px;
+} 
 #tspan {
     border-bottom: 2px solid black;
     padding-bottom: 15px;
@@ -52,7 +52,6 @@ body {
     font-size: 20px;
     padding-left: 42px;
     padding-right: 42px;
-
 }
 
 #maindiv {
@@ -61,4 +60,29 @@ body {
 
 #maindiv span{
     display: block;
+}
+
+@media (max-width: 414px)
+{
+    #timerdiv {
+        margin: auto;
+        padding-bottom: 20px;
+        border: 2px solid rgb(0, 0, 0);
+        border-radius: 10px;
+        width: 95%;
+    }
+
+    #tspan span{
+        font-size: 20px;
+        padding-left: 29px;
+        padding-right: 29px;
+    }
+
+    body h1 {
+        font-size: 40px;
+    }
+    #timer {
+        font-size: 56px;
+    }
+
 }
