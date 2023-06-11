@@ -25,7 +25,7 @@
       <button id="startBtn" class="btn help">금연 시작하기</button>
     </div>
     <form id="login-form" class="hidden fadein_animation">
-      <label for="username">이름 : </label>
+      <label for="username">닉네임 : </label>
       <input
         id="inputName"
         name="username"
@@ -46,41 +46,59 @@
       <input id="submitBtn" class="btn" type="submit" value="확인" />
     </form>
     <!-- 위시리스트 -->
-    <button id="wishbtn" class="hidden">위시리스트</button>
-    <form id="wish-form" class="hidden">
-      <label for="productname">원하는 물건 :</label>
-      <input
-        id="inputProduct"
-        name="productname"
-        type="text"
-        maxlength="10"
-        required
-      />
-      <label for="productprice">가격 :</label>
-      <input
-        id="inputPrice"
-        name="productprice"
-        type="number"
-        maxlength="10"
-        required
-      />
-      <input id="wishsubmit" type="submit" value="확인" />
-      <div>
-        <progress id="bar1" value="" max=""></progress>
-      </div>
-      <div>
-        <progress id="bar2" value="" max=""></progress>
-      </div>
-      <div>
-        <progress id="bar3" value="" max=""></progress>
-      </div>
-      <div>
-        <progress id="bar4" value="" max=""></progress>
-      </div>
-      <div>
-        <progress id="bar5" value="" max=""></progress>
-      </div>
-    </form>
+    <button id="wishbtn" class="hidden btn smallFontSize">위시리스트</button>
+    <div id="wishDiv" class="hidden">
+      <button id="gotohome" class="btn smallFontSize">돌아가기</button>
+      <form id="wish-form" class="fadein_animation">
+        <span class="block">원하는 물건 :</span>
+        <input
+          class="inputStyle"
+          id="inputProduct"
+          name="productname"
+          type="text"
+          maxlength="10"
+          required
+        />
+        <span class="block">가격 :</span>
+        <input
+          class="inputStyle block"
+          id="inputPrice"
+          name="productprice"
+          type="number"
+          maxlength="10"
+          required
+        />
+        <input id="wishsubmit" type="submit" class="btn" value="확인" />
+        <div id="wish-list"></div>
+      </form>
+    </div>
+    <!-- 설정 -->
+    <button id="configbtn" class="hidden btn">정보 수정</button>
+    <div id="configDiv" class="hidden fadein_animation">
+      <form id="config-form">
+        <label for="updatename">닉네임 : </label>
+        <input
+          id="updateName"
+          name="updatename"
+          class="block inputStyle"
+          maxlength="15"
+          type="text"
+          required
+        />
+        <label for="updatedambae">하루 평균 흡연량(개비) : </label>
+        <input
+          id="updateDambae"
+          name="updatedambae"
+          class="block inputStyle"
+          type="number"
+          maxlength="10"
+          required
+        />
+        <input id="updatesubmit" class="btn" type="submit" value="확인" />
+      </form>
+      <button id="gotohome2" class="btn smallFontSize">돌아가기</button>
+    </div>
+
     <!-- 금연 시간 -->
     <div id="timerdiv" class="hidden">
       <span id="timer">00:00:00:00</span>
@@ -90,11 +108,13 @@
         <span id="timerText">분</span>
         <span id="timerText">초</span>
       </div>
-      <!-- 금연 다시하기 -->
+      <!-- 금연 초기화 -->
       <div>
-        <button id="resetBtn" class="btn">금연 다시하기</button>
+        <button id="resetBtn" class="btn">시간 초기화</button>
       </div>
       <div id="maindiv">
+        <span id="report"></span>
+        <span class="smallFontSize">님의 금연 리포트 (일수 기준)</span>
         <span class="subColor block">지금까지 아낀돈 : </span>
         <span id="saveMoney" class="middleFontSize">지금까지 아낀돈 : </span>
         <span class="subColor block">안피운 담배 :</span>
@@ -109,5 +129,6 @@
     <script src="js/save.js"></script>
     <script src="js/wish.js"></script>
     <script src="js/style.js"></script>
+    <script src="js/config.js"></script>
   </body>
 </html>

@@ -5,6 +5,8 @@ const inputDambae = document.querySelector("#inputDambae");
 const savedUsername = localStorage.getItem("username");
 const timerdiv = document.querySelector("#timerdiv");
 const firstDiv = document.querySelector("#firstDiv");
+const configbtn = document.querySelector("#configbtn");
+const report = document.querySelector("#report");
 
 const HIDDEN_CLASSNAME = "hidden";
 
@@ -12,6 +14,7 @@ function onClickBtn() {
     startBtn.classList.add("hidden");
     loginForm.classList.remove("hidden");
     startBtn.remove();
+    report.innerText = `${localStorage.getItem("username")}`;
 }
 
 function onSubmitInput(event) {
@@ -24,9 +27,8 @@ function onSubmitInput(event) {
     wishbtn.classList.remove("hidden");
     timerdiv.classList.add("fadein_animation");
     firstDiv.remove();
+    configbtn.classList.remove("hidden");
     localStorage.setItem("time", Date.now());
-
-
 }
 
 
@@ -39,7 +41,9 @@ if(savedUsername)
     wishbtn.classList.remove("hidden");
     timerdiv.classList.add("fadein_animation");
     firstDiv.remove();
+    configbtn.classList.remove("hidden");
 }
+
 
 startBtn.addEventListener("click", onClickBtn);
 loginForm.addEventListener("submit", onSubmitInput);
