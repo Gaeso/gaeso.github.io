@@ -6,9 +6,9 @@ function onSaveMoney() {
     const life = day * localStorage.getItem("dambae") * 5;
     const ciga = day * localStorage.getItem("dambae");
     
-    saveMoney.innerText = `지금까지 아낀돈 : ${money}원`;
-    saveLife.innerText = `늘어난 수명 : ${life}분`;
-    tobacco.innerText = `안피운 담배 : ${ciga}개`;
+    saveMoney.innerText = `${money}원`;
+    saveLife.innerText = `${life}분`;
+    tobacco.innerText = `${ciga}개`;
 }
 
 onSaveMoney();

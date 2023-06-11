@@ -9,17 +9,79 @@
     />
     <title id="title">아직도 펴?</title>
     <link rel="stylesheet" href="css/style.css" />
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.1/gsap.min.js"
+      integrity="sha512-qF6akR/fsZAB4Co1QDDnUXWnaQseLGXoniuSuSlPQK6+aWhlMZcHzkasCSlnWoe+TJuudlka1/IQ01Dnhgq95g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
   </head>
   <body>
     <h1>아직도 펴?</h1>
-    <button id="startBtn">금연 시작하기</button>
-    <form id="login-form" class="hidden">
+    <!-- 금연 시작 -->
+    <div id="firstDiv">
+      <span class="help">올해는 진짜 끊으셔야죠</span>
+      <span class="help">저희가 도와드릴게요.</span>
+      <button id="startBtn" class="btn help">금연 시작하기</button>
+    </div>
+    <form id="login-form" class="hidden fadein_animation">
       <label for="username">이름 : </label>
-      <input id="inputName" name="username" type="text" required />
+      <input
+        id="inputName"
+        name="username"
+        class="block inputStyle"
+        maxlength="15"
+        type="text"
+        required
+      />
       <label for="dambae">하루 평균 흡연량(개비) : </label>
-      <input id="inputDambae" name="dambae" type="number" required />
-      <button id="submitBtn">확인</button>
+      <input
+        id="inputDambae"
+        name="dambae"
+        class="block inputStyle"
+        type="number"
+        maxlength="10"
+        required
+      />
+      <input id="submitBtn" class="btn" type="submit" value="확인" />
     </form>
+    <!-- 위시리스트 -->
+    <button id="wishbtn" class="hidden">위시리스트</button>
+    <form id="wish-form" class="hidden">
+      <label for="productname">원하는 물건 :</label>
+      <input
+        id="inputProduct"
+        name="productname"
+        type="text"
+        maxlength="10"
+        required
+      />
+      <label for="productprice">가격 :</label>
+      <input
+        id="inputPrice"
+        name="productprice"
+        type="number"
+        maxlength="10"
+        required
+      />
+      <input id="wishsubmit" type="submit" value="확인" />
+      <div>
+        <progress id="bar1" value="" max=""></progress>
+      </div>
+      <div>
+        <progress id="bar2" value="" max=""></progress>
+      </div>
+      <div>
+        <progress id="bar3" value="" max=""></progress>
+      </div>
+      <div>
+        <progress id="bar4" value="" max=""></progress>
+      </div>
+      <div>
+        <progress id="bar5" value="" max=""></progress>
+      </div>
+    </form>
+    <!-- 금연 시간 -->
     <div id="timerdiv" class="hidden">
       <span id="timer">00:00:00:00</span>
       <div id="tspan">
@@ -28,18 +90,24 @@
         <span id="timerText">분</span>
         <span id="timerText">초</span>
       </div>
+      <!-- 금연 다시하기 -->
       <div>
-        <button id="resetBtn">시간 초기화</button>
+        <button id="resetBtn" class="btn">금연 다시하기</button>
       </div>
       <div id="maindiv">
-        <span id="saveMoney">지금까지 아낀돈 : </span>
-        <span id="tobacco">안피운 담배 :</span>
-        <span id="saveLife">늘어난 수명 : </span>
+        <span class="subColor block">지금까지 아낀돈 : </span>
+        <span id="saveMoney" class="middleFontSize">지금까지 아낀돈 : </span>
+        <span class="subColor block">안피운 담배 :</span>
+        <span id="tobacco" class="middleFontSize">안피운 담배 :</span>
+        <span class="subColor block">늘어난 수명 : </span>
+        <span id="saveLife" class="middleFontSize"></span>
       </div>
     </div>
-
+    <!--스크립트 -->
     <script src="js/userinfo.js"></script>
     <script src="js/timer.js"></script>
     <script src="js/save.js"></script>
+    <script src="js/wish.js"></script>
+    <script src="js/style.js"></script>
   </body>
 </html>

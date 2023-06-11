@@ -16,6 +16,8 @@ function damTimer() {
 
 function onReset() {
     localStorage.setItem("time", Date.now())
+    localStorage.clear();
+    location.reload();
 }
 
 resetBtn.addEventListener("click", onReset)
