@@ -175,11 +175,13 @@ progress {
     padding-bottom: 10px;
 }
 
+
+
 /* 처음 화면 애니메이션 */
 .help {
     color:#153a37;
-    text-shadow: #4a6361;
-    font-size: 35px;
+    text-shadow: -1px 0 #FFFFFF, 0 1px #FFFFFF, 1px 0 #FFFFFF, 0 -1px #FFFFFF;
+    font-size: 40px;
     padding: 20px;
     opacity: 0;
     display: block;
@@ -202,12 +204,19 @@ progress {
     font-size: 20px;
     margin: auto;
     margin-top: 30px;
+    padding: 20px;
 }
 
 #login-form {
     font-size: 20px;
     color:#153a37;
-    text-shadow: -2px 0 #fdd1d1, 0 2px #ffffff, 2px 0 #ffffff, 0 -2px #ffffff;
+    text-shadow: -2px 0 #ffffff, 0 2px #ffffff, 2px 0 #ffffff, 0 -2px #ffffff;
+}
+
+#config-form {
+    font-size: 20px;
+    color:#153a37;
+    text-shadow: -2px 0 #ffffff, 0 2px #ffffff, 2px 0 #ffffff, 0 -2px #ffffff;
 }
 
 /* 스마트폰 화면 */
@@ -245,6 +254,9 @@ progress {
     .btn {
         font-size: 20px;
         border-radius: 5px;
+    }
+    .help {
+        font-size: 30px;
     }
 
 }
